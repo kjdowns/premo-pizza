@@ -56,19 +56,27 @@ export class EmployeeComponent implements OnInit {
 
   sortEmployees(active): void {
     console.log(this.employees)
-    this.employees = this.employees.filter(employee => {
-      employee.active == active;
-    })
+    if (active) {
+      this.employeeService.findByStatus("active")
+        .subscribe(data => {
+          this.employees = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+    } else {
+      this.employeeService.findByStatus("inactive")
+        .subscribe(data => {
+          this.employees = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+    }
     console.log(this.employees)
     console.log(`Sorting ${active}`)
   }
 
-  sortActive(): void {
-    console.log(this.employees)
-    this.employees = this.employees.filter(employee => {
-      employee.active == true;
-    })
-    console.log(this.employees)
-    console.log(`Sorting Active`)
-  }
 }
