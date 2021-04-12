@@ -6,6 +6,7 @@ import { CustomerComponent } from './components/customer/customer.component';
 import { EmployeeAddComponent } from './components/employee/employee-add/employee-add.component';
 import { EmployeeEditComponent } from './components/employee/employee-edit/employee-edit.component';
 import { EmployeeComponent } from './components/employee/employee.component';
+import { OrdersComponent } from './components/orders/orders.component';
 
 const routes: Routes = [
   {path: 'employees', component: EmployeeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'employees/:id', component: EmployeeEditComponent},
   { path: 'customers', component: CustomerComponent },
   { path: 'customers/add', component: AddCustomerComponent },
-  { path: 'customers/:phoneNumber', component: CustomerDetailsComponent }
+  { path: 'customers/:phoneNumber', component: CustomerDetailsComponent },
+  { path: 'orders', component: OrdersComponent }
 ];
 
 @NgModule({

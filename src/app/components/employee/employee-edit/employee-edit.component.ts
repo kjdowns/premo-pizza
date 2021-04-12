@@ -38,7 +38,7 @@ export class EmployeeEditComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
-          this.message = 'The tutorial was updated successfully!';
+          this.message = 'The employee was updated successfully!';
         },
         error => {
           console.log(error);
