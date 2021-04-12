@@ -7,9 +7,11 @@ import { EmployeeAddComponent } from './components/employee/employee-add/employe
 import { EmployeeEditComponent } from './components/employee/employee-edit/employee-edit.component';
 import { EmployeeOrdersComponent } from './components/employee/employee-orders/employee-orders.component';
 import { EmployeeComponent } from './components/employee/employee.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 import { OrdersComponent } from './components/orders/orders.component';
 
 const routes: Routes = [
+  {path: '', component: HomePageComponent},
   {path: 'employees', component: EmployeeComponent},
   {path: 'employees/add', component: EmployeeAddComponent},
   { path: 'employees/orders/:id', component: EmployeeOrdersComponent },

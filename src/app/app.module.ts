@@ -18,6 +18,7 @@ import { EmployeeOrdersComponent } from './components/employee/employee-orders/e
 import { MatSortModule } from '@angular/material/sort';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './shared/material.module';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MaterialModule } from './shared/material.module';
     AddCustomerComponent,
     CustomerDetailsComponent,
     OrdersComponent,
-    EmployeeOrdersComponent
+    EmployeeOrdersComponent,
+    HomePageComponent
   ],
   imports: [
     CommonModule,
