@@ -8,9 +8,24 @@ import { OrderService } from 'src/app/services/order.service';
 })
 export class OrdersComponent implements OnInit {
 
+  orders = [];
+
   constructor(private orderService: OrderService ) { }
 
   ngOnInit(): void {
+    this.retrieveOrders();
+  }
+
+  retrieveOrders(): void {
+    this.orderService.getAll()
+      .subscribe(
+        data => {
+          this.orders = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
   }
 
 }

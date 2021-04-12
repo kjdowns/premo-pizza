@@ -73,6 +73,9 @@
       <a class="badge badge-warning" routerLink="/employees/{{ currentEmployee.id }}">
         Edit
       </a>
+      <a class="badge badge-warning" routerLink="/employees/orders/{{ currentEmployee.id }}">
+        Orders
+      </a>
     </div>
 
     <div *ngIf="!currentEmployee">
