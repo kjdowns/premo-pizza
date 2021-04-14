@@ -1,4 +1,4 @@
-<div style="width: 400px; margin: auto;">
+<div class="employee-edit-container" style="width: 400px; margin: auto;">
     <div *ngIf="currentEmployee" class="edit-form">
       <h4>Employee</h4>
       <form>
@@ -76,10 +76,6 @@
         Activate
       </button>
   
-      <button class="badge badge-danger mr-2" (click)="deleteEmployee()">
-        Delete
-      </button>
-  
       <button
         type="submit"
         class="badge badge-success"
@@ -87,6 +83,11 @@
       >
         Update
       </button>
+
+      <button class="badge badge-danger mr-2" style="margin: 7px;" (click)="deleteEmployee()">
+        Delete
+      </button>
+
       <p>{{ message }}</p>
     </div>
   

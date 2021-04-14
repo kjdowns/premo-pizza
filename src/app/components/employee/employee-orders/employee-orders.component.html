@@ -1,16 +1,11 @@
 
-<div *ngIf="orders">
+<div *ngIf="orders" class="employee-orders-container">
     <mat-card>
-        <mat-card-header>
-            <!-- <mat-icon mat-card-avatar="" svgIcon="{{user.avatar}}"></mat-icon> -->
+        <mat-card-header class="mat-header">
             <mat-card-title>
                 <h2>{{employee.name}}</h2>
             </mat-card-title>
-            <!-- <mat-card-subtitle>
-                Birthday {{user.bithDate | date:'d LLLL'}}
-            </mat-card-subtitle> -->
         </mat-card-header>
-        <br>
         <br>
         <form class="date-block" [formGroup]="filterForm">
             <div class="date-block__list">
@@ -33,8 +28,10 @@
               <mat-datepicker #toDate></mat-datepicker>
             </mat-form-field>
           </div>
-           <button mat-button color="primary" class="primary" (click)="applyFilter()">Submit</button>
-           <button mat-button color="primary" class="primary" (click)="clearFilter()">Clear</button>
+          <div class="button-container">
+            <button mat-raised-button color="primary" class="primary" (click)="applyFilter()">Submit</button>
+           <button mat-raised-button color="basic" class="primary" (click)="clearFilter()">Clear</button>
+          </div>
         </form>
         <mat-card-content>
             <div class="mat-elevation-z8">
@@ -96,7 +93,7 @@
                     </tbody>
                 </table>
             
-                <!-- <mat-paginator [pageSize]="2" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
+                <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20, dataSource.data.length]" showFirstLastButtons></mat-paginator>
             </div>
         </mat-card-content>
     </mat-card>

@@ -1,4 +1,4 @@
-<div style="width: 400px; margin: auto;">
+<div class="employee-add-component" style="width: 400px; margin: auto;">
     <div class="submit-form">
       <div *ngIf="!submitted">
         <div class="form-group">
@@ -65,7 +65,7 @@
             </select>
           </div>
   
-        <button (click)="saveEmployee()" class="btn btn-success">Submit</button>
+        <button (click)="saveEmployee()" class="btn btn-info">Submit</button>
       </div>
   
       <div *ngIf="submitted">

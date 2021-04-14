@@ -6,6 +6,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { DatePipe } from '@angular/common';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatPaginator } from '@angular/material/paginator';
 
 export interface Order {
   orderId: number;
@@ -42,11 +43,11 @@ export class EmployeeOrdersComponent implements OnInit, AfterViewInit {
                 this.pipe = new DatePipe('en');
             }
 
-              // @ViewChild(MatPaginator) paginator: MatPaginator;
-              @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit(): void {
     this.retrieveData();
+    this.dataSource.paginator = this.paginator;
   }
 
   ngAfterViewInit() {
@@ -72,6 +73,7 @@ export class EmployeeOrdersComponent implements OnInit, AfterViewInit {
       }
     })
     this.dataSource = new MatTableDataSource<Order>(temp);
+    this.dataSource.paginator = this.paginator;
   }
 
   clearFilter(){
@@ -80,6 +82,7 @@ export class EmployeeOrdersComponent implements OnInit, AfterViewInit {
       this.ordersTotal += order.total;
     })
     this.dataSource = new MatTableDataSource<Order>(this.orders);
+    this.dataSource.paginator = this.paginator;
   }
 
   retrieveData(): void {

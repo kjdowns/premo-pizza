@@ -19,6 +19,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './shared/material.module';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { ProductComponent } from './compenents/product/product.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     CustomerDetailsComponent,
     OrdersComponent,
     EmployeeOrdersComponent,
-    HomePageComponent
+    HomePageComponent,
+    ProductComponent
   ],
   imports: [
     CommonModule,
@@ -44,7 +47,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     FormsModule,
     MatTableModule,
     MatSortModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
