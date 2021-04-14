@@ -21,6 +21,7 @@ import { MaterialModule } from './shared/material.module';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { ProductComponent } from './compenents/product/product.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddOrdersComponent } from './components/orders/add-orders/add-orders.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     OrdersComponent,
     EmployeeOrdersComponent,
     HomePageComponent,
-    ProductComponent
+    ProductComponent,
+    AddOrdersComponent
   ],
   imports: [
     CommonModule,

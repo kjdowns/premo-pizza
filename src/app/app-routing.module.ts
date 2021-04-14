@@ -9,6 +9,7 @@ import { EmployeeEditComponent } from './components/employee/employee-edit/emplo
 import { EmployeeOrdersComponent } from './components/employee/employee-orders/employee-orders.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { AddOrdersComponent } from './components/orders/add-orders/add-orders.component';
 import { OrdersComponent } from './components/orders/orders.component';
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'customers/add', component: AddCustomerComponent },
   { path: 'customers/:phoneNumber', component: CustomerDetailsComponent },
   { path: 'orders', component: OrdersComponent },
+  { path: 'orders/add', component: AddOrdersComponent },
   { path: 'products', component: ProductComponent }
 ];
 
