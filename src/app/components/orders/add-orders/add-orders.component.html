@@ -68,9 +68,9 @@
           
             <div class="calculator-keys">
           
-              <button type="button" (click) = "clear()"  class="admin" value="employee-login">Employee Login</button>
-              <button type="button" (click) = "clear()"  class="admin" value="add-customer">Add Customer</button>
-              <button type="button" (click) = "productMenu()" class="admin" value="see-full-menu">See Full Menu</button>
+              <button type="button" routerLink="/employees/add"  class="admin" value="employee-login">Add Employee</button>
+              <button type="button" routerLink="/customers/add"  class="admin" value="add-customer">Add Customer</button>
+              <button type="button" routerLink="products" class="admin" value="see-full-menu">See Full Menu</button>
               <button type="button" (click) = "clear()"  class="admin" value="edit-order">Edit Order</button>
           
               <button type="button" (click) = "getNumber('7.35')" class="product" value="7.35">Pizza (S) Pepperoni</button>
@@ -112,9 +112,9 @@
           </div>        
         </div>
 
-        <!-- <div>
+        <div>
         <button (click)="saveOrder()" class="btn btn-info">Submit</button>
-      </div> -->
+      </div>
   
       <div *ngIf="submitted">
         <h4>You submitted successfully!</h4>
