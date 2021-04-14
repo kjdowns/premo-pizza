@@ -140,6 +140,7 @@ export class AddOrdersComponent implements OnInit {
     console.log(JSON.stringify(this.order))
     this.order.total = Number(this.order.total);
     console.log(JSON.stringify(this.order.customer.values));
+    this.router.navigate(['/products']);
     // this.orderService.create(this.order)
     //   .subscribe(data => {
     //     console.log(data);

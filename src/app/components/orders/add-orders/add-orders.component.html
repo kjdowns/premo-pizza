@@ -6,7 +6,7 @@
         <div class="form-group">
           <label for="name">Customer</label>
           <select class="form-control" name="customer" [(ngModel)]="order.customer">
-            <option *ngFor="let customer of customers" [value]="customer" >{{customer.name}}</option>
+            <option *ngFor="let customer of customers" [value]="customer.phoneNumber" >{{customer.name}}</option>
          </select>
         </div>
 
